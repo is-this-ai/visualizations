@@ -8,7 +8,7 @@ DOI: [10.5334/tismir.254](https://transactions.ismir.net/articles/10.5334/tismir
 
 ## 🌐 Live Site
 
-Visit the interactive visualizations at: **[https://is-this-ai.github.io/](https://is-this-ai.github.io/)**
+Visit the interactive visualizations at: **[https://is-this-ai.github.io/visualizations](https://is-this-ai.github.io/visualizations)**
 
 ## 📊 Contents
 
@@ -16,9 +16,9 @@ This repository hosts:
 
 ### Interactive Visualizations
 
-- **[UMAP Projections](https://is-this-ai.github.io/umap_plots.html)** - Interactive two-dimensional and three-dimensional UMAP projections of the audio feature space, revealing clustering patterns between AI-generated and human-composed music samples.
+- **[UMAP Projections](https://is-this-ai.github.io/visualizations/umap_plots.html)** - Interactive two-dimensional and three-dimensional UMAP projections of the audio feature space, revealing clustering patterns between AI-generated and human-composed music samples.
 
-- **[Audio Analysis Results](https://is-this-ai.github.io/audio_analysis_results.html)** - Experimental results from testing the IRCAM Amplify detector's robustness to audio transformations, including filtering and sampling rate conversions.
+- **[Audio Analysis Results](https://is-this-ai.github.io/visualizations/audio_analysis_results.html)** - Experimental results from testing the IRCAM Amplify detector's robustness to audio transformations, including filtering and sampling rate conversions.
 
 ### Data
 
