@@ -14,8 +14,8 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #2c3e50;
+            background: #f5f5f5;
             min-height: 100vh;
             padding: 2rem;
         }
@@ -24,27 +24,27 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 2rem;
+            background: white;
+            border-bottom: 2px solid #2c3e50;
+            padding: 2.5rem 2rem 2rem;
             text-align: center;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 0.5rem;
-            font-weight: 700;
+            font-weight: 600;
+            color: #2c3e50;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.95;
+            font-size: 1rem;
+            color: #7f8c8d;
             margin-top: 0.5rem;
         }
 
@@ -54,30 +54,28 @@
 
         .intro {
             margin-bottom: 2rem;
-            font-size: 1.05rem;
+            font-size: 1rem;
             color: #555;
         }
 
         .paper-link {
             display: inline-block;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
-            border-radius: 4px;
             text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
+            color: #2c3e50;
+            transition: background 0.2s ease;
         }
 
         .paper-link:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
+            background: #dfe6e9;
         }
 
         .paper-link strong {
             display: block;
-            color: #667eea;
+            color: #2c3e50;
             margin-bottom: 0.3rem;
         }
 
@@ -89,58 +87,53 @@
         }
 
         .viz-card {
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
+            border: 1px solid #ddd;
             padding: 2rem;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             text-decoration: none;
             color: inherit;
             display: block;
-            background: white;
+            background: #fafafa;
         }
 
         .viz-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
-            transform: translateY(-4px);
+            background: #f0f0f0;
+            border-color: #2c3e50;
         }
 
         .viz-card h3 {
-            color: #667eea;
+            color: #2c3e50;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .viz-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        .icon {
-            font-size: 1.8rem;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            color: #333;
+            font-size: 1.5rem;
+            color: #2c3e50;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 2px solid #2c3e50;
+            font-weight: 600;
         }
 
         footer {
-            background: #f8f9fa;
+            background: #ecf0f1;
+            border-top: 1px solid #bdc3c7;
             padding: 1.5rem 2rem;
             text-align: center;
-            color: #666;
+            color: #7f8c8d;
             font-size: 0.9rem;
         }
 
         footer a {
-            color: #667eea;
+            color: #2c3e50;
             text-decoration: none;
         }
 
@@ -154,7 +147,7 @@
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .content {
@@ -180,7 +173,7 @@
             </div>
 
             <a href="https://transactions.ismir.net/articles/10.5334/tismir.254" class="paper-link" target="_blank" rel="noopener">
-                <strong>📄 Read the Full Paper</strong>
+                <strong>Read the Full Paper</strong>
                 Transactions of the International Society for Music Information Retrieval (ISMIR)
             </a>
 
@@ -188,18 +181,12 @@
 
             <div class="visualizations">
                 <a href="umap_plots.html" class="viz-card">
-                    <h3>
-                        <span class="icon">📊</span>
-                        UMAP Projections
-                    </h3>
+                    <h3>UMAP Projections</h3>
                     <p>Explore interactive two-dimensional and three-dimensional UMAP projections of our dataset. These visualizations reveal the underlying structure and relationships in the audio feature space, allowing you to investigate how AI-generated and human-composed music samples cluster in high-dimensional space.</p>
                 </a>
 
                 <a href="audio_analysis_results.html" class="viz-card">
-                    <h3>
-                        <span class="icon">🔬</span>
-                        Audio Analysis Results
-                    </h3>
+                    <h3>Audio Analysis Results</h3>
                     <p>View detailed experimental results examining how the IRCAM Amplify detector responds to various audio transformations. This analysis investigates the impact of filtering transformations and sampling rate conversions on AI detection performance, using a randomly selected subset of five samples per source from our test set.</p>
                 </a>
             </div>
