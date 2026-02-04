@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This AI? - Interactive Visualizations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            padding: 2.5rem;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .paper-link {
+            display: inline-block;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .paper-link strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+
+        .visualizations {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .viz-card {
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            background: white;
+        }
+
+        .viz-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .viz-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .viz-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .icon {
+            font-size: 1.8rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            header {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Is This AI?</h1>
+            <p class="subtitle">Interactive Visualizations and Experimental Results</p>
+        </header>
+
+        <div class="content">
+            <div class="intro">
+                <p>Welcome to the companion website for our research on AI-generated music detection. This site provides interactive visualizations and experimental results from our study on the robustness of AI music detection systems.</p>
+            </div>
+
+            <a href="https://transactions.ismir.net/articles/10.5334/tismir.254" class="paper-link" target="_blank" rel="noopener">
+                <strong>📄 Read the Full Paper</strong>
+                Transactions of the International Society for Music Information Retrieval (ISMIR)
+            </a>
+
+            <h2 class="section-title">Interactive Visualizations</h2>
+
+            <div class="visualizations">
+                <a href="umap_plots.html" class="viz-card">
+                    <h3>
+                        <span class="icon">📊</span>
+                        UMAP Projections
+                    </h3>
+                    <p>Explore interactive two-dimensional and three-dimensional UMAP projections of our dataset. These visualizations reveal the underlying structure and relationships in the audio feature space, allowing you to investigate how AI-generated and human-composed music samples cluster in high-dimensional space.</p>
+                </a>
+
+                <a href="audio_analysis_results.html" class="viz-card">
+                    <h3>
+                        <span class="icon">🔬</span>
+                        Audio Analysis Results
+                    </h3>
+                    <p>View detailed experimental results examining how the IRCAM Amplify detector responds to various audio transformations. This analysis investigates the impact of filtering transformations and sampling rate conversions on AI detection performance, using a randomly selected subset of five samples per source from our test set.</p>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Research project by the Is This AI? team | <a href="https://github.com/is-this-ai/visualizations" target="_blank" rel="noopener">View on GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
